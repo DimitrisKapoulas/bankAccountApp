@@ -26,7 +26,7 @@ public class Checking extends Account {
     public void showInfo(){
         super.showInfo();
         System.out.println("Account type: Checking");
-        System.out.println("Your Savings account features"+
+        System.out.println("Your Checking account features"+
                 "\n Debit Card Number: " + debitCardNumber +
                 "\n Debit Card PIN: " + debitCardPIN);
     }
