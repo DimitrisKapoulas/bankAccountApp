@@ -2,8 +2,8 @@ package com.company;
 
 public class Checking extends Account {
     // List properties specific to a Checking Account
-    int debitCardNumber;
-    int debitCardPIN;
+    private int debitCardNumber;
+    private int debitCardPIN;
 
     // Constructor to initialize checking account properties
 
