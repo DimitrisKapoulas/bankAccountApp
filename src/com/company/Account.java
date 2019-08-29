@@ -10,9 +10,12 @@ public abstract class Account implements IBaseRate {
 
     // Constructor to set base properties and initialize the account
 
-    public Account(String name) {
-        System.out.print("New Account: ");
-    }
+    public Account(String name, String sSn, double initDeposit) {
+        this.name = name;
+        this.sSN = sSn;
+        balance = initDeposit + 100;
+        System.out.println("Name: " + name + " SSN: " + sSn + " BALANCE: " + balance);
 
+    }
     // List common methods
 }
