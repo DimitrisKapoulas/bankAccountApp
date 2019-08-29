@@ -13,6 +13,11 @@ public class Savings extends Account {
         setSafetyDepositBox();
     }
 
+    @Override
+    public void setRate(){
+        rate = getBaseRate() - 0.25;
+    }
+
     public void setSafetyDepositBox(){
         safetyDepositBoxID = (int)(Math.random()*Math.pow(10, 3));
         safetyDepositBoxKey = (int)(Math.random()*Math.pow(10, 4));
@@ -24,6 +29,6 @@ public class Savings extends Account {
         super.showInfo();
         System.out.println("Your Savings account features"+
         "\n Safety Deposit Box ID: " + safetyDepositBoxID +
-         "\n Safety Deposit Box key: " + safetyDepositBoxKey);
+        "\n Safety Deposit Box key: " + safetyDepositBoxKey);
     }
 }
