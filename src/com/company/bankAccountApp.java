@@ -6,7 +6,8 @@ public class bankAccountApp {
 
         Savings sav1 = new Savings("Tom Morello", "123456789", 1500);
         Checking chk1 = new Checking("Nelson Oliveira", "987456321", 2500);
-
+        sav1.showInfo();
+        chk1.showInfo();
 	// Read a CSV file, then create new accounts based on that date
 
     }
