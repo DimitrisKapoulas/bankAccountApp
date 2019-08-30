@@ -1,18 +1,13 @@
 package com.company;
 
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.List;
 
 public class bankAccountApp {
 
     public static void main(String[] args) {
-        /*
-        Savings sav1 = new Savings("Tom Morello", "123456789", 1500);
-        Checking chk1 = new Checking("Nelson Oliveira", "987456321", 2500);
-        sav1.showInfo();
-        chk1.showInfo();
-        sav1.compound();
-        **/
+        List<Account> accounts = new LinkedList<Account>();
 
         // Read a CSV file, then create new accounts based on that date
         String file = "/home/mitsos/IdeaProjects/bankAccountApp/src/utilities/NewBankAccounts.csv";
@@ -32,12 +27,18 @@ public class bankAccountApp {
             double initDeposit = Double.parseDouble(accountHolder[3]);
             System.out.println(name + " " + sSN + " " + accountType + " $" + initDeposit);
             if(accountType.equals("Savings")){
-                System.out.println("Open a Savings Account");
+                accounts.add(new Savings(name, sSN, initDeposit));
             }else if (accountType.equals("Checking")){
-                System.out.println("Open a Checking Account");
+                accounts.add(new Checking(name, sSN, initDeposit));
             }else{
                 System.out.println("Error Reading Account Type");
             }
+        }
+
+        for (Account acc: accounts
+             ) {
+            System.out.println("**************");
+            acc.showInfo();
         }
     }
 }
